@@ -1,0 +1,17 @@
+<div *ngIf="selectedProduct">
+
+
+    <div class="col-md-4 thumbnail image">
+        <img width="360" height="360" src={{selectedProduct.src}} />
+    </div>    
+    <div class="col-md-6 well">
+            <strong>{{selectedProduct.name}}</strong>
+            <p>{{selectedProduct.info}}</p>
+            <h1 class="badge">${{selectedProduct.price}}</h1>
+            <button (click)="addToCart(selectedProduct)" class="btn btn-md btn-primary">Agregar al carrito</button>
+            <hr />
+            <button (click)="goBack()" class="btn btn-danger">Volver atrás</button>
+    </div>
+
+
+</div>
